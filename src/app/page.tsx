@@ -50,16 +50,17 @@ export default function Index() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center hero-italian texture-overlay">
+      <section id="home" className="relative min-h-screen flex items-center justify-center hero-italian">
         <div className="absolute inset-0">
           <Image
-            src="/generated/hero-background-kitchen.jpg"
-            alt="Italian Kitchen"
+            src="/generated/authentic-italian-kitchen-hero.jpg"
+            alt="Authentic Italian Kitchen - Rustic Tuscan Style"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-primary/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-italian-burgundy/60 via-primary/40 to-italian-terracotta/50"></div>
+          <div className="absolute inset-0 texture-overlay"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -74,13 +75,13 @@ export default function Index() {
               </div>
             </div>
 
-            <h1 className="font-italian-display text-6xl md:text-8xl font-bold mb-6 text-italian-cream">
+            <h1 className="font-italian-display text-6xl md:text-8xl font-bold mb-6 text-white drop-shadow-2xl">
               TASTE THE
               <br />
-              <span className="text-italian-gold">TRADITION</span>
+              <span className="text-italian-gold drop-shadow-lg">TRADITION</span>
             </h1>
 
-            <p className="font-italian-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-primary-foreground font-semibold">
+            <p className="font-italian-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-white font-semibold drop-shadow-lg bg-black/20 backdrop-blur-sm px-6 py-4 rounded-lg border border-white/20">
               Experience authentic Italian flavors passed down through generations.
               Fresh pasta made daily with love, just like Nonna used to make.
             </p>
@@ -89,7 +90,7 @@ export default function Index() {
               <Link href="/menu">
                 <Button
                   size="lg"
-                  className="italian-card px-12 py-6 text-lg font-italian-body bg-italian-gold text-italian-burgundy hover:bg-secondary smooth-hover"
+                  className="italian-card px-12 py-6 text-lg font-italian-body bg-italian-gold text-italian-burgundy hover:bg-italian-cream shadow-2xl border-2 border-italian-burgundy/30 smooth-hover"
                 >
                   View Our Menu
                   <Utensils className="ml-2 w-5 h-5" />
@@ -98,7 +99,7 @@ export default function Index() {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-12 py-6 text-lg font-italian-body border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary smooth-hover"
+                className="px-12 py-6 text-lg font-italian-body border-2 border-white/80 text-white hover:bg-white hover:text-italian-burgundy shadow-2xl backdrop-blur-sm bg-black/10 smooth-hover"
               >
                 Make Reservation
                 <Clock className="ml-2 w-5 h-5" />
@@ -115,14 +116,17 @@ export default function Index() {
       </section>
 
       {/* Featured Dishes Preview */}
-      <section className="py-20 px-4 bg-background vine-decoration">
+      <section className="py-20 px-4 bg-background mediterranean-stone">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="font-italian-display text-4xl md:text-5xl font-bold text-primary mb-4">
-              Our Signature Dishes
-            </h2>
-            <p className="font-italian-body text-xl text-muted-foreground max-w-2xl mx-auto">
-              Each dish tells a story of tradition, crafted with the finest ingredients and time-honored recipes.
+            <div className="inline-block relative">
+              <h2 className="font-italian-display text-4xl md:text-5xl font-bold text-italian-burgundy mb-4 relative z-10">
+                Our Signature Dishes
+              </h2>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-italian-gold rounded-full"></div>
+            </div>
+            <p className="font-italian-body text-xl text-italian-burgundy/80 max-w-2xl mx-auto mt-6 bg-italian-cream/50 backdrop-blur-sm px-6 py-3 rounded-lg border border-italian-gold/20">
+              Each dish tells a story of tradition, crafted with the finest ingredients and time-honored recipes from our beloved Nonna.
             </p>
           </div>
 
@@ -193,18 +197,19 @@ export default function Index() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 bg-primary text-primary-foreground">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="font-italian-display text-4xl md:text-5xl font-bold mb-6">
+      <section className="py-20 px-4 tuscan-gradient relative overflow-hidden">
+        <div className="absolute inset-0 mediterranean-stone opacity-30"></div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="font-italian-display text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
             Ready to Indulge?
           </h2>
-          <p className="font-italian-body text-xl mb-8">
-            Join us for an unforgettable dining experience in the heart of Little Italy.
+          <p className="font-italian-body text-xl mb-8 text-white/90 drop-shadow-md bg-black/20 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 max-w-2xl mx-auto">
+            Join us for an unforgettable dining experience in the heart of Little Italy, where every meal is a celebration of famiglia.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button
               size="lg"
-              className="bg-italian-gold text-italian-burgundy hover:bg-secondary px-8 py-4 text-lg font-italian-body smooth-hover"
+              className="bg-italian-gold text-italian-burgundy hover:bg-italian-cream px-8 py-4 text-lg font-italian-body smooth-hover shadow-2xl border-2 border-italian-burgundy/30"
             >
               <Phone className="mr-2 w-5 h-5" />
               Call for Reservations
@@ -212,7 +217,7 @@ export default function Index() {
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-italian-body smooth-hover"
+              className="border-2 border-white/80 text-white hover:bg-white hover:text-italian-burgundy px-8 py-4 text-lg font-italian-body smooth-hover shadow-2xl backdrop-blur-sm bg-black/10"
             >
               <MapPin className="mr-2 w-5 h-5" />
               Find Us
