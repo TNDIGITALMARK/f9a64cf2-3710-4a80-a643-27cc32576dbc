@@ -1,37 +1,48 @@
 @import "tailwindcss";
 
+/* Italian Restaurant Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600&display=swap');
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  /* Italian Restaurant Color Scheme - Warm Earth Tones */
+  --background: 39 36% 95%; /* Warm cream */
+  --foreground: 25 20% 15%; /* Dark brown */
 
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card: 41 45% 92%; /* Light cream */
+  --card-foreground: 25 25% 20%; /* Dark brown */
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --popover: 41 45% 92%;
+  --popover-foreground: 25 25% 20%;
 
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  --primary: 8 65% 35%; /* Deep terracotta/burgundy */
+  --primary-foreground: 41 45% 92%; /* Light cream */
 
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 45 85% 70%; /* Golden yellow */
+  --secondary-foreground: 25 25% 20%; /* Dark brown */
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --muted: 41 25% 85%; /* Muted cream */
+  --muted-foreground: 25 15% 45%; /* Medium brown */
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: 18 75% 45%; /* Rich burgundy accent */
+  --accent-foreground: 41 45% 92%; /* Light cream */
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
+  --border: 41 20% 80%; /* Soft cream border */
+  --input: 41 25% 85%; /* Input cream */
+  --ring: 8 65% 35%; /* Terracotta ring */
+
+  /* Italian Restaurant Specific Colors */
+  --italian-gold: 45 85% 65%; /* Warm gold */
+  --italian-burgundy: 8 65% 30%; /* Deep burgundy */
+  --italian-terracotta: 18 75% 45%; /* Terracotta */
+  --italian-cream: 41 45% 92%; /* Warm cream */
+  --italian-olive: 75 25% 35%; /* Olive green */
 
   --radius: 0.5rem;
 
@@ -124,6 +135,13 @@ All colors MUST be HSL.
   --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  /* Italian Restaurant Theme Colors */
+  --color-italian-gold: hsl(var(--italian-gold));
+  --color-italian-burgundy: hsl(var(--italian-burgundy));
+  --color-italian-terracotta: hsl(var(--italian-terracotta));
+  --color-italian-cream: hsl(var(--italian-cream));
+  --color-italian-olive: hsl(var(--italian-olive));
   
   /* Border Radius */
   --radius-lg: var(--radius);
@@ -160,4 +178,134 @@ All colors MUST be HSL.
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Italian Restaurant Design System */
+.font-italian-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.font-italian-display {
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+}
+
+.font-italian-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+/* Roman Column Pattern */
+.roman-column {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--italian-cream)) 0%,
+    hsl(var(--italian-gold)) 5%,
+    hsl(var(--italian-cream)) 10%,
+    hsl(var(--italian-cream)) 90%,
+    hsl(var(--italian-gold)) 95%,
+    hsl(var(--italian-cream)) 100%
+  );
+  border: 2px solid hsl(var(--italian-gold));
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Decorative Border Pattern */
+.italian-border {
+  border: 3px solid hsl(var(--italian-burgundy));
+  border-image: linear-gradient(
+    45deg,
+    hsl(var(--italian-burgundy)),
+    hsl(var(--italian-gold)),
+    hsl(var(--italian-burgundy))
+  ) 1;
+  position: relative;
+}
+
+.italian-border::before,
+.italian-border::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid hsl(var(--italian-gold));
+  background: hsl(var(--italian-cream));
+}
+
+.italian-border::before {
+  top: -2px;
+  left: -2px;
+}
+
+.italian-border::after {
+  bottom: -2px;
+  right: -2px;
+}
+
+/* Vine Pattern */
+.vine-decoration {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B8860B' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Italian Card Style */
+.italian-card {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--italian-cream)) 0%,
+    hsl(var(--card)) 50%,
+    hsl(var(--italian-cream)) 100%
+  );
+  border: 2px solid hsl(var(--italian-gold));
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  position: relative;
+}
+
+.italian-card::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px solid hsl(var(--italian-burgundy));
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Italian Hero Background */
+.hero-italian {
+  background:
+    linear-gradient(
+      45deg,
+      rgba(139, 69, 19, 0.8) 0%,
+      rgba(160, 82, 45, 0.6) 50%,
+      rgba(139, 69, 19, 0.8) 100%
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(218, 165, 32, 0.1) 0%,
+      transparent 70%
+    );
+}
+
+/* Texture Overlay */
+.texture-overlay {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+  opacity: 0.05;
+}
+
+/* Smooth Animations */
+.smooth-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smooth-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
