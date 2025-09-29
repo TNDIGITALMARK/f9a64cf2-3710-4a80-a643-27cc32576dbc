@@ -59,10 +59,10 @@ export default function Index() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-accent/80"></div>
+          <div className="absolute inset-0 bg-primary/30"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="roman-column inline-block px-8 py-4 mb-8">
               <div className="flex items-center gap-3 justify-center">
@@ -74,13 +74,13 @@ export default function Index() {
               </div>
             </div>
 
-            <h1 className="font-italian-display text-6xl md:text-8xl font-bold mb-6">
+            <h1 className="font-italian-display text-6xl md:text-8xl font-bold mb-6 text-italian-cream">
               TASTE THE
               <br />
               <span className="text-italian-gold">TRADITION</span>
             </h1>
 
-            <p className="font-italian-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-italian-cream">
+            <p className="font-italian-body text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-primary-foreground font-semibold">
               Experience authentic Italian flavors passed down through generations.
               Fresh pasta made daily with love, just like Nonna used to make.
             </p>
@@ -98,7 +98,7 @@ export default function Index() {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-12 py-6 text-lg font-italian-body border-2 border-italian-cream text-italian-cream hover:bg-italian-cream hover:text-primary smooth-hover"
+                className="px-12 py-6 text-lg font-italian-body border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary smooth-hover"
               >
                 Make Reservation
                 <Clock className="ml-2 w-5 h-5" />
@@ -109,7 +109,7 @@ export default function Index() {
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <div className="animate-bounce">
-            <ArrowRight className="w-6 h-6 text-italian-cream rotate-90" />
+            <ArrowRight className="w-6 h-6 text-primary-foreground rotate-90" />
           </div>
         </div>
       </section>
