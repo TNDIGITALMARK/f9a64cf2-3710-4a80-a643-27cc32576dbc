@@ -27,7 +27,7 @@ export default function Index() {
                   Mom's Spaghetti
                 </h1>
                 <p className="font-italian-body text-sm text-primary-foreground/80">
-                  Authentic Italian Cuisine Since 1950
+                  Authentic Italian Cuisine Since 1970
                 </p>
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function Index() {
                 </h3>
               </div>
               <p className="font-italian-body text-muted-foreground">
-                Serving authentic Italian cuisine with love since 1950.
+                Serving authentic Italian cuisine with love since 1970.
               </p>
             </div>
             <div>
